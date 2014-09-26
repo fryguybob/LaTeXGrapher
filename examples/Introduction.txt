@@ -1,0 +1,35 @@
+% View is comma separated list of ordered pairs.
+% Thew view will be the minimum bounding box that
+% includes all the points.
+View (-10,-10),(10, 10)
+
+% Function definition follows normal rules.
+% After a definition a ':' followed by x = ...
+% lists the special points for a function.
+% Special points are points that cannot
+% be plotted with simple function evaulation.
+> f(x) = (x - 3)*(x - 2)/(x - 3) : x = 3
+
+% Piecewise function:
+% The pattern is for each line we have an equation and a conditional statement.
+% At the end we have special points.  The bounds on the piecewise conditions
+% are automatically special points.  A blank condition is taken to always
+% be true.  The function is evaluated at the first condition that is true.
+> g(x) = x     | x < -3
+         x - 2 | x < 3
+         x / 2 |
+               : x = -3, 3
+
+% Helper functions.
+% Helpers are on a line starting with '>'.  They get parsed
+% like a normal function, but don't get plotted.
+> h(t,u) = t*sin(u)
+> h'(x) = h(x,pi*x)
+
+% Markup.
+% These would be "editable" in a graphical the markup editor.
+% to make that easier we might want to ensure that the lanaguage
+% kept them as a single line.
+% Line (1,0),(f(1),2*h'(1))
+% Point (1,0)
+% Label (1,10) $x^2$

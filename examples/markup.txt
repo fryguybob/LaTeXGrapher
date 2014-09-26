@@ -1,0 +1,24 @@
+View (-10,-10),(10, 10)
+
+> r = 5
+> n = 5
+> x0 = 2
+> y0 = 3
+> a(t) = t*pi/(2*n)
+> fx(t) = r*cos(a(t)) + x0
+> fy(t) = r*sin(a(t)) + y0
+> gx(t) = -(fx(t) - x0) + x0
+> gy(t) = -(fy(t) - y0) + y0
+
+Line    (gx(0),gy(0)),(fx(0),fy(0))
+Segment (gx(1),gy(1)),(fx(1),fy(1))
+Line    (gx(2),gy(2)),(fx(2),fy(2))
+Segment (gx(3),gy(3)),(fx(3),fy(3))
+Line    (gx(4),gy(4)),(fx(4),fy(4))
+Segment (gx(5),gy(5)),(fx(5),fy(5))
+Line    (gx(6),gy(6)),(fx(6),fy(6))
+Segment (gx(7),gy(7)),(fx(7),fy(7))
+Line    (gx(8),gy(8)),(fx(8),fy(8))
+Segment (gx(9),gy(9)),(fx(9),fy(9))
+
+g(x) = x

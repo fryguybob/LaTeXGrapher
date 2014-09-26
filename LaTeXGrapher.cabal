@@ -1,0 +1,43 @@
+﻿Name:                LaTeXGrapher
+Version:             0.2
+Synopsis:            Excellent two dimentional plots for LaTeX documents.
+Description:         LaTeXGrapher makes high quality two dimensional vector graphic function plots 
+                     with a minimal amount of work by running a DSL aimed at mathematicians.
+License:             BSD3
+License-file:        LICENSE
+Author:              Ryan Yates
+Maintainer:          fryguybob@gmail.com
+Category:            Graphics
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+Library
+  Build-depends:       base >= 4.3 && < 4.4,
+                       containers >= 0.4.0.0 && < 0.5,
+                       parsec >= 2.1 && < 3.0,
+                       vector-space >= 0.6.2 && < 0.8,
+                       diagrams-core >= 0.4 && < 0.5,
+                       diagrams-lib >= 0.4 && < 0.5,
+                       diagrams-postscript >= 0.1 && < 0.2
+  Exposed-Modules:     LaTeXGrapher.Math,
+                       LaTeXGrapher.Data.Function,
+                       LaTeXGrapher.Data.Context,
+                       LaTeXGrapher.Data.Markup,
+                       LaTeXGrapher.Parser,
+                       LaTeXGrapher.Parser.Expression,
+                       LaTeXGrapher.Output,
+                       LaTeXGrapher.Plot,
+                       LaTeXGrapher.Repl,
+                       LaTeXGrapher.Diagrams
+  Hs-source-dirs:      src
+
+Executable LaTeXGrapher
+  Main-is:             main.hs
+  Build-depends:       base >= 4.3 && < 4.4,
+                       data-default >= 0.2 && < 0.3,
+                       containers >= 0.4.0.0 && < 0.5,
+                       parsec >= 2.1 && < 3.0,
+                       cmdargs >= 0.6 && < 0.8,
+                       split >= 0.1.2 && < 0.2,
+                       vector-space >= 0.6.2 && < 0.8
+  Hs-source-dirs:      src

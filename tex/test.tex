@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{graphicx,latexgrapher}
+
+\begin{document}
+
+\begin{latexgrapher}[width=100]
+View (-1,-1),(11,11)
+
+f(x) = NaN          | x < 0
+       3            | x < 1
+       3+2*floor(x) | x < 4
+       10           |
+                    : x = 0,1,2,3,4
+\end{latexgrapher}
+
+Second example:
+
+\begin{latexgrapher}
+View (-3,-3),(5,5)
+
+f(x) = x^3/20 + 2
+\end{latexgrapher}
+
+\end{document}
